@@ -1,0 +1,39 @@
+Project 1 Pseudocode
+import opengl glu and glut
+define a main function
+	create a window
+	call draw() function
+
+Init function
+	change the viewport size
+
+draw function
+	load identity
+	call drawWirePoly() function sending in number of points (9) and radius of 1
+
+	call drawWireStar() function senind in radius of 1 and .5
+
+	swap buffer so the things drawn will swap to the front buffer
+
+
+
+drawWirePoly function
+	start the line loop
+	change color to green
+	for loop till all points drawn
+		math to calculate points based on number of sides
+		plot the point 
+	end loop
+	end line loop	
+
+
+
+drawWireStar function
+	start the line loop
+	change color to white
+	for loop till all points drawn
+		math to calculate points based on whether it is an outside or inside vertex of the star
+		plot the point(s)
+	end loop
+	end line loop	
+

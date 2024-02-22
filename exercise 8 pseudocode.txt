@@ -1,0 +1,58 @@
+exercise 8 pseudocode
+
+import statements
+
+circle radius = .5
+circle center = 0,0
+dragging boolean
+
+draw circle function
+    steps = 1000 vertices
+    begin line loop
+    for i in range steps
+        angle = 2 * pi * i / steps
+        x = cX + R * cos(angle)
+        y = cY + R * sin(angle)
+        glVertex2f(x,y)
+    end line loop
+
+init function
+    clear color to white
+    set to modelview
+    load identity
+    set to projection
+    load identity
+    set ortho view variables
+
+display function
+    clear color buffer
+    set drawing color to red
+    call draw circle with radius of .5
+    flush it
+
+mouse function
+   if left mouse button clicked in circle
+        # Check if the mouse click is inside the circle
+        distance = sqrt((x - circle_center[0]) ** 2 + (y - circle_center[1]) ** 2)
+        if distance is less than the circles radius
+            is_dragging = True
+    else if the left mouse button is no longer being clicked
+        dargging is false
+
+def motion(x, y):
+   use the circle center variable
+    if dragging:
+        # Update circle center based on mouse movement
+        change the new circle center to new x and y
+        glutPostRedisplay()
+
+main function
+    glut init
+    display mode single and RGB
+    window position, name, and size
+    call init
+    call display
+    call glut mouse func
+    main loop
+
+call main 
