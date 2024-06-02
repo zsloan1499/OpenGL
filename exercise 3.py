@@ -26,7 +26,7 @@ def drawWirePoly(arr):
 
 def draw():
     #create the array
-    array = [[.1, .1],[.3, .1],[.1, .5],[.3,.5]]
+    array = [[.1, .1],[.3, .1],[.3, .5],[.1,.5]]
     glLoadIdentity()
     drawPoly(array)
     drawWirePoly(array)

@@ -1,0 +1,48 @@
+Project 4 Pseudocode
+import pillow
+import opengl stuff
+
+make global variables of the polygons and vertices and texture coordinates
+
+
+load texture func
+	set imagepath variable to image name
+	use pillow to open the image using the image path vairable
+	set textureid to the imageid
+	bind image to the textid number
+	take other texparameter from other exercises/practice
+	return textureid
+
+
+init func
+	enable depthtest,texture,lighting
+	set light positiom and the ambient, diffuse, and specular
+
+
+draw_pyramid
+	bind cinderbloack texture
+	begin drawing
+	loop through polygons
+		loop through vertices
+			match vertex with texture coordinate 
+	end
+
+display
+	clear color buffer
+	load identity
+	perspective view
+	rotate to see pyramid better
+	draw pyramid call
+	swapbuffer
+
+
+main func
+	glutinit
+	set display mode,double, rgba, allow depth for camera
+	set window size
+	name window
+	call display(display)
+	call init
+
+
+main func call

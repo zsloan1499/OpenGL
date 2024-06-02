@@ -1,0 +1,47 @@
+imports for opengl, glut, math, and cmodel3
+
+init function
+	global pelvis variable
+	clear color to black for background
+	set matrix mode to projection
+	matrix mode modelview
+	set camera position
+	make pelvis and set offset to move pelvis to be on the box drawn later
+	make spine and make child of pelvis
+	rotate spine some to kind of mimic spine rotation in image
+	move spine as we flipped pelvis so pelvis is not in the spine
+	make neck and make child of spine
+	make head and make child of neck
+	make right arm and right leg along with left arm and left leg and set all rotations to mimic
+	image
+	rotate the upper right leg some to create some space and mimic image better
+
+
+display function
+	global variable model
+	clear color buffer
+	set color yellow
+	draw wire cube of size 13
+	set color red
+	start line drawing
+	draw the vertical and horizontal lines
+	stop line drawing
+	set color black
+	push matirx
+	flush
+	swap buffer to draw new image
+	
+main function
+	global variables a and b
+	glut init to start systems
+	set display mode to double buffer, color RGB, and depth for perspective
+	set window location
+	set window size
+	set window name
+	call init function
+	call display func
+	idle func
+	mainloop
+
+main func call
+

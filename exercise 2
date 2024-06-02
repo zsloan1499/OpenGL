@@ -1,0 +1,53 @@
+from OpenGL.GL import *
+from OpenGL.GLUT import *
+from OpenGL.GLU import *
+from math import *
+
+def drawWirePoly(n, r):
+    glBegin(GL_LINE_LOOP)
+    for i in range(n):
+        theta = 2.0 * 3.1415926 * i / n
+        x = r * cos(theta)
+        y = r * sin(theta)
+        glVertex2f(x, y)
+    glEnd()
+
+def drawSolidPoly(n, r):
+    glBegin(GL_TRIANGLE_FAN)
+    glVertex2f(0, 0)  # Center of the polygon
+    for i in range(n + 1):
+        theta = 2.0 * 3.1415926 * i / n
+        x = r * cos(theta)
+        y = r * sin(theta)
+        glVertex2f(x, y)
+    glEnd()
+
+def draw():
+    glClear(GL_COLOR_BUFFER_BIT)
+    glColor3f(1, 0, 1)  # change color
+
+    # Draw filled polygon
+    glLoadIdentity()
+    drawSolidPoly(11, 0.5)
+
+    #Draw wireframe polygon
+    #glLoadIdentity()
+    #drawWirePoly(7, 0.5)
+
+    glutSwapBuffers()
+
+
+def init():
+    glClearColor(1,1,1,0)
+    glViewport(0,0,1,1)
+
+def main():
+    glutInit()
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)
+    glutInitWindowPosition(80, 80)
+    glutInitWindowSize(500, 500)
+    glutCreateWindow("")
+    glutDisplayFunc(draw)
+    glutMainLoop()
+
+main()

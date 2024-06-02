@@ -1,0 +1,50 @@
+Project 2 Pseudocode
+
+import statements
+import math
+
+store mouse click vertices list
+
+
+init function
+	set up scene
+	set matrix mode
+	load the identity
+	orthographic view
+
+display function
+	set color to black
+	change point size to see vertices easier
+	begin
+	for vertices in vertex list added by mouse,
+		draw vertex
+	end
+	if vertex list has points
+		change color black
+		begin
+		get last vertex point and newest vertex point x and y, specify first end point
+		get newest endpoint to draw the line between
+	end
+	flush it down
+
+distance function take point 1 and the newest point being clicked
+    calculate the distance between the two points in 2d space by using the pythagorean theorem
+	#math.sqrt((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2) ( added after calculated/ tested)
+
+mouse function
+	if mouse button == pressed down
+		if click is near starting vertex (call distance fucntion)
+			draw the first vertex again
+		else
+			add new vertex to the list using mouse x and y
+		redraw the screen to show new changes/ redisplay
+
+main function
+	init
+	dispay mode single with rgb
+	window size and name
+	call init function
+	call mouse function with mouse func
+	call glut main loop
+
+call main function so it all works(easy to forget sometimes)

@@ -1,0 +1,53 @@
+import pillow
+import opengl stuff
+
+init func
+	clearcolor
+	set to projection mode
+	load identity
+	set ortho
+
+
+draw texture function
+	create new image
+	draw a new image
+	draw the blank red rectangle
+	draw all the circles
+set image width and height
+
+load texture func
+	set imagepath variable to image name
+	use pillow to open the image using the image path vairable
+	set textureid to the imageid
+	bind image to the textid number
+	take other texparameter from other exercises/practice
+	return textureid
+
+
+draw cube func
+	get and bind image texture
+	draw front face points
+	draw back face
+	draw right face
+	draw left face
+	draw top face
+	draw bottom face
+
+reshape func(added after psuedocode was done)
+
+main func
+	glutinit
+	set display mode,double, rgb, allow depth for camera
+	set window size
+	name window
+	enable depth	
+	enable texture to allow a 2d image on a 3d thing
+	call init
+	call display(display)
+	call reshape
+	create the global textureid variable
+	set textureid equal to load texture function call which will be given when we give it an image we want to upload
+
+
+
+main func call

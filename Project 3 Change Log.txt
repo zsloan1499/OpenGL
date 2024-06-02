@@ -1,0 +1,43 @@
+thursday
+11am 
+inital project/template pseudo code
+
+12pm 
+drawing the cube pseudo code
+Cube done being drawn with the glu look at / camera being pointed at correct angle
+
+2pm
+loading texture pseudo code done
+
+friday
+7pm
+make intial project/template
+main,display,init and making the other draw cube and loadtexture 
+7:30pm
+done drawing cube with the correct angle being looked at
+7:45pm
+loaded texture into program
+
+8:30pm
+load texture done(maybe? cube wont draw)
+
+8:45pm
+Have to add a reshape definition as found through google/stackoverflow
+
+9:05pm
+finished reshape and now done cube displays with the correct image texture
+
+sunday
+10am ish
+realized we had to make our own texture and not just use the image below so worked on fixing that
+12pm
+stopped for lunch
+12:23pm
+continued after lunch
+2:14pm
+finished load texture and draw texture
+
+
+
+
+
